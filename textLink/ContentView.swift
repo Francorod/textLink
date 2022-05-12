@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
-        Text("Hello, world!")
+        Button("Click Here") {
+            openURL(URL(string: "https://www.apple.com")!)
+        }
             .padding()
     }
 }
